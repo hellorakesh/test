@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity logo slider</title>
+    <style>
+        body {
+  background: #F8F8FF;
+}
+
+.logo-slider {
+    overflow: hidden;
+    padding: 30px 0 0 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logo-slider:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 45s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 183px;
+    height: 83px;
+    margin: 0 40px;
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="logo-slider" data-v-4ef8651c="">
+        <div class="logos-slide" data-v-4ef8651c="">
+          <img src="https://i.ibb.co/Vv5rkDK/api-partner-verzon.png" data-v-4ef8651c="">
+          <img src="https://i.ibb.co/J399KDg/api-partner-netflix.png" data-v-4ef8651c="">
+          <img src="https://i.ibb.co/TKT0F5L/api-partner-yelp.png" data-v-4ef8651c="">
+          <img src="https://i.ibb.co/HG6KR89/api-partner-adobe.png" data-v-4ef8651c="">
+          <img src="https://i.ibb.co/hMSJ1sg/api-partner-ring.png" data-v-4ef8651c="">
+          <img src="https://i.ibb.co/4RWQcMS/api-partner-nespresso.png" data-v-4ef8651c="">
+        </div>
+      </div>
+
+      <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logo-slider").appendChild(copy);
+      </script>
+</body>
+</html>
